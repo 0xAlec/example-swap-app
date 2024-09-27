@@ -5,7 +5,13 @@ import { coinbaseWallet, injected, walletConnect } from 'wagmi/connectors';
 export function getConfig() {
   return createConfig({
     chains: [base],
-    connectors: [injected(), coinbaseWallet()],
+    connectors: [
+      coinbaseWallet({
+        appName: 'yourAppName',
+        preference: 'smartWalletOnly', // set this to `all` to use EOAs as well
+        version: '4',
+      }),
+    ],
     storage: createStorage({
       storage: cookieStorage,
     }),
