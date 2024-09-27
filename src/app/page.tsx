@@ -107,7 +107,7 @@ function App() {
         {/* Swap */}
         {swappableToken && (
           <div className="flex justify-center">
-            <Swap className="bg-black" key={swappableToken.address}>
+            <Swap className="bg-black" key={swappableToken.address} isSponsored>
               <SwapAmountInput
                 label="Sell"
                 swappableTokens={[ETH]}
