@@ -107,7 +107,7 @@ function App() {
         {/* Swap */}
         {swappableToken && (
           <div className="flex justify-center">
-            <Swap>
+            <Swap className="bg-black" key={swappableToken.address}>
               <SwapAmountInput
                 label="Sell"
                 swappableTokens={[ETH]}
@@ -122,7 +122,6 @@ function App() {
                 type="to"
               />
               <SwapButton />
-              <SwapMessage />
               <SwapToast />
             </Swap>
           </div>
