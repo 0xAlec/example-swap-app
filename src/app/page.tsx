@@ -68,7 +68,7 @@ function App() {
         <div className="flex flex-col items-center w-1/2">
           <TokenSearch onChange={handleChange} delayMs={200} />
           {tokens.length > 0 && (
-            <div className="mt-4 flex flex-col w-full rounded-lg bg-white border border-gray-200 overflow-hidden">
+            <div className="mt-4 flex flex-col rounded-lg bg-white border border-gray-200 overflow-hidden">
               {tokens.map((token) => (
                 <TokenRow
                   key={token.address}
@@ -82,8 +82,12 @@ function App() {
           )}
         </div>
 
+        <div className="h-12" />
+        <div className="h-12" />
+        <div className="h-12" />
+
         {/* Swap */}
-        <div className="flex justify-center pt-6">
+        <div className="flex justify-center">
           <Swap>
             <SwapAmountInput
               label="Sell"
