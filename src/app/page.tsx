@@ -17,7 +17,10 @@ import {
   SwapAmountInput,
   SwapToggleButton,
   SwapButton,
-  SwapMessage,
+  SwapSettings,
+  SwapSettingsSlippageDescription,
+  SwapSettingsSlippageInput,
+  SwapSettingsSlippageTitle,
   SwapToast,
 } from '@coinbase/onchainkit/swap';
 
@@ -108,6 +111,16 @@ function App() {
         {swappableToken && (
           <div className="flex justify-center">
             <Swap className="bg-black" key={swappableToken.address} isSponsored>
+              <SwapSettings>
+                <SwapSettingsSlippageTitle>
+                  Max. slippage
+                </SwapSettingsSlippageTitle>
+                <SwapSettingsSlippageDescription>
+                  Your swap will revert if the prices change by more than the
+                  selected percentage.
+                </SwapSettingsSlippageDescription>
+                <SwapSettingsSlippageInput />
+              </SwapSettings>
               <SwapAmountInput
                 label="Sell"
                 swappableTokens={[ETH]}
