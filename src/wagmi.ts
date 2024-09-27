@@ -7,7 +7,7 @@ export function getConfig() {
     chains: [base],
     connectors: [
       coinbaseWallet({
-        appName: 'yourAppName',
+        appName: 'Let`s Build Onchain Week 1 Example app',
         preference: 'smartWalletOnly', // set this to `all` to use EOAs as well
         version: '4',
       }),
